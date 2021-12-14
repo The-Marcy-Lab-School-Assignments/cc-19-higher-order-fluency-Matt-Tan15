@@ -9,21 +9,14 @@ const alumni = [
 
 //question 1
 const averageAge = (arr) => {
-    const ages = arr.reduce((a,b) => a + b.age, 0);
-    return Math.round(ages / arr.length);
+    return Math.round(arr.reduce((a,b) => a + b.age, 0) / arr.length);
 };
 
 // console.log(averageAge(alumni));
 
 //question 2
 const bananaBread = (arr) => {
-   return arr.map(alums => ({
-       name : alums.name,
-       job: alums.job,
-       language : alums.language,
-       age: alums.age,
-       bananaBread : `${alums.name} got bananaBread at ${alums.job}`
-   }));
+   return arr.map(alums => ({...alums,bananaBread : `${alums.name} got bananaBread at ${alums.job}`}));
 };
 
 // console.log(bananaBread(alumni));
@@ -37,13 +30,7 @@ const ninetiesBabies = (arr) => {
 
 //question 4
 const addSchool = (arr) => {
-    return arr.map(alums => ({
-       name : alums.name,
-       job: alums.job,
-       language : alums.language,
-       age: alums.age,
-       school : "The Marcy Lab School"
-   }));
+    return arr.map(alums => ({...alums, school : 'The Marcy Lab School'}));
 };
 
 // console.log(addSchool(alumni));
@@ -55,7 +42,7 @@ const allUseJavaScript = (arr) => {
 
 // console.log(allUseJavaScript(alumni));
 
-const animals =['cheetah','dog', 'cat', 'dodobird', 'bear', 'dolphin']
+const animals =['cheetah','dog', 'cat', 'dodobird', 'bear', 'dolphin'];
 
 //question 6
 const noVowel = (arr) => arr.map(word => word.replace(/[aeiou]/gi,'x'));
@@ -70,7 +57,7 @@ const longerThanSeven = (arr) => arr.some(word => word.length > 7);
 // console.log(longerThanSeven(animals));
 
 //question 9
-const allFour = (arr) => arr.every(word => word.length === 4)
+const allFour = (arr) => arr.every(word => word.length === 4);
 // console.log(allFour(animals));
 
 //question 10
