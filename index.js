@@ -16,7 +16,7 @@ const averageAge = (arr) => {
 
 //question 2
 const bananaBread = (arr) => {
-   return arr.map(alums => ({...alums,bananaBread : `${alums.name} got bananaBread at ${alums.job}`}));
+   return arr.map(alums => ({...alums, bananaBread : `${alums.name} got bananaBread at ${alums.job}`}));
 };
 
 // console.log(bananaBread(alumni));
