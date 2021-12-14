@@ -8,38 +8,23 @@ const alumni = [
 {name:'Cielo', job:'NYT',language:'JavaScript', age:21}];
 
 //question 1
-const averageAge = (arr) => {
-    return Math.round(arr.reduce((a,b) => a + b.age, 0) / arr.length);
-};
-
+const averageAge = (arr) => Math.round(arr.reduce((a,b) => a + b.age, 0) / arr.length);
 // console.log(averageAge(alumni));
 
 //question 2
-const bananaBread = (arr) => {
-   return arr.map(alums => ({...alums, bananaBread : `${alums.name} got bananaBread at ${alums.job}`}));
-};
-
+const bananaBread = (arr) => arr.map(alums => ({...alums, bananaBread : `${alums.name} got bananaBread at ${alums.job}`}));
 // console.log(bananaBread(alumni));
 
 //question 3
-const ninetiesBabies = (arr) => {
-    return arr.filter(person => person.age > 21);
-};
-
+const ninetiesBabies = (arr) => arr.filter(person => person.age > 21);
 // console.log(ninetiesBabies(alumni));
 
 //question 4
-const addSchool = (arr) => {
-    return arr.map(alums => ({...alums, school : 'The Marcy Lab School'}));
-};
-
+const addSchool = (arr) =>  arr.map(alums => ({...alums, school : 'The Marcy Lab School'}));
 // console.log(addSchool(alumni));
 
 //question 5
-const allUseJavaScript = (arr) => {
-    return arr.every(person => person.language === "JavaScript");
-};
-
+const allUseJavaScript = (arr) => arr.every(person => person.language === "JavaScript");
 // console.log(allUseJavaScript(alumni));
 
 const animals =['cheetah','dog', 'cat', 'dodobird', 'bear', 'dolphin'];
